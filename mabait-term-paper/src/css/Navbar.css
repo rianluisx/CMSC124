@@ -1,0 +1,158 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 4;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 1rem;
+  height: var(--header-height);
+  padding: 2rem 3rem;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  padding: 50px;
+}
+
+
+.logo-name{
+  position: relative;
+  right: 55px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+
+.logo-name span{
+  color: var(--color-dark-red-hover);
+}
+
+.logo-name span:hover{
+    color: #073b60
+}
+
+
+.nav-links {
+  display: flex;
+  gap: var(--link-gap);
+}
+
+.nav-links a {
+  color: var(--color-dark-blue);
+  font-weight: var(--semi-bold);
+  transition: all 0.2s linear;
+}
+
+
+.nav-links a:hover{
+  color: var(--color-hover);
+}
+
+
+.nav-toggle,
+.nav-close {
+  font-size: 1.75rem;
+  cursor: pointer;
+  
+}
+
+.nav-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+
+.show-menu {
+  right: 0;
+}
+
+.nav-close {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--color-dark-blue);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: 50%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    transition: right 0.4s;
+  }
+
+  .show-menu {
+    right: 0;
+  }
+
+  .logo img{
+    right: 80px;
+  }
+
+  .nav-links{
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    color: var(--color-white); 
+    text-decoration: none;
+
+  }  
+
+   .logo-name span{
+    display: flex;
+  }
+
+  .nav-close {
+    display: block;
+    color: var(--color-white); 
+  }
+
+  .nav-close:hover{
+    color: var(--color-hover);
+    transition: all 0.3 linear;
+  }
+
+
+
+  .nav-toggle {
+    display: block;
+    color: var(--color-dark-blue);
+  }
+
+  .nav-toggle:hover {
+    color: var(--color-dark-red-hover);
+
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navbar {
+    height: calc(var(--header-height) + 1rem);
+  }
+
+  .nav-close,
+  .nav-toggle, .nav-links .contact {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    column-gap: 2.5rem;
+  }
+}
