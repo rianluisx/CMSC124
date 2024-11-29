@@ -1,0 +1,33 @@
+.footer {
+  background: var(--color-dark-blue);
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--color-white);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+
+.footer-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--color-white);
+  transition: all 0.3s linear;
+}
+.footer-icon:hover {
+  color: var(--color-dark-red-hover);
+}
+.copyright {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  color: var(--clr-white);
+}
+.copyright span {
+  margin-left: 0.5rem;
+}
